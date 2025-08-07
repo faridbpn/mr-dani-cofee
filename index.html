@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukit Rasa Coffee - Premium Coffee Delivered to Your Door</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            dark: '#3E2723',
+                            medium: '#5D4037',
+                            light: '#8D6E63',
+                            cream: '#EFEBE9',
+                            gold: '#D4AF37'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Open Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)), url('https://images.unsplash.com/photo-1445112098124-3e76dd67983c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .coffee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(to bottom right, #EFEBE9, #FFFFFF);
+        }
+        
+        .contact-bg {
+            background-image: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.9)), url('https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans bg-coffee-cream text-coffee-dark">
+    <!-- Navigation -->
+    <nav class="bg-coffee-dark text-coffee-cream sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-coffee text-coffee-gold text-2xl"></i>
+                    <a href="#" class="font-serif text-xl font-bold">Bukit Rasa Coffee</a>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-coffee-gold transition">Home</a>
+                    <a href="#about" class="hover:text-coffee-gold transition">About</a>
+                    <a href="#products" class="hover:text-coffee-gold transition">Products</a>
+                    <a href="#testimonials" class="hover:text-coffee-gold transition">Testimonials</a>
+                    <a href="#contact" class="hover:text-coffee-gold transition">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-coffee-gold">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="ml-1">(0)</span>
+                    </a>
+                    <button class="md:hidden focus:outline-none" id="menu-toggle">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-2 py-2" id="mobile-menu">
+                <a href="#home" class="block py-2 hover:text-coffee-gold">Home</a>
+                <a href="#about" class="block py-2 hover:text-coffee-gold">About</a>
+                <a href="#products" class="block py-2 hover:text-coffee-gold">Products</a>
+                <a href="#testimonials" class="block py-2 hover:text-coffee-gold">Testimonials</a>
+                <a href="#contact" class="block py-2 hover:text-coffee-gold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center text-coffee-cream">
+        <div class="container mx-auto px-4 py-20 text-center md:text-left">
+            <div class="max-w-2xl">
+                <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">Artisan Coffee, Crafted with Passion</h1>
+                <p class="text-xl mb-8">Discover our premium selection of single-origin and blended coffees, roasted to perfection for your enjoyment.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#products" class="bg-coffee-gold hover:bg-yellow-600 text-coffee-dark font-bold py-3 px-6 rounded transition">Shop Now</a>
+                    <a href="#about" class="border border-coffee-cream hover:bg-coffee-medium text-coffee-cream font-bold py-3 px-6 rounded transition">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Our Coffee Journey</h2>
+                <div class="w-24 h-1 bg-coffee-gold mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Coffee farm" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="font-serif text-2xl font-bold mb-4">From Bean to Cup</h3>
+                    <p class="mb-4 text-lg">Founded in 2015, Bukit Rasa Coffee began with a simple mission: to bring the finest coffee from Indonesian highlands to coffee lovers worldwide.</p>
+                    <p class="mb-6">We work directly with small-scale farmers in Sumatra, Java, and Bali to source the highest quality Arabica and Robusta beans. Our master roaster carefully crafts each batch to highlight the unique characteristics of each origin.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-leaf text-coffee-gold mr-2"></i>
+                            <span>100% Organic Beans</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-fire text-coffee-gold mr-2"></i>
+                            <span>Small Batch Roasted</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe-asia text-coffee-gold mr-2"></i>
+                            <span>Direct Trade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-coffee-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Our Coffee Selection</h2>
+                <div class="w-24 h-1 bg-coffee-gold mx-auto mb-6"></div>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="filter-btn px-4 py-2 rounded-full bg-coffee-dark text-coffee-cream" data-filter="all">All Products</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream transition" data-filter="arabica">Arabica</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream transition" data-filter="robusta">Robusta</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream transition" data-filter="blend">Blends</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream transition" data-filter="merchandise">Merchandise</button>
+                </div>
+                
+                <div class="max-w-md mx-auto relative">
+                    <input type="text" placeholder="Search products..." class="w-full px-4 py-2 rounded-full border border-coffee-light focus:outline-none focus:ring-2 focus:ring-coffee-gold">
+                    <button class="absolute right-3 top-2 text-coffee-medium">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="product-grid">
+                <!-- Product 1 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product arabica">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Sumatra Mandheling Arabica" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-coffee-gold text-coffee-dark px-2 py-1 rounded text-sm font-bold">BESTSELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Sumatra Mandheling</h3>
+                            <span class="text-coffee-gold font-bold">$14.99</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Full-bodied with earthy tones and a smooth chocolate finish.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-coffee-light ml-2">4.7</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product robusta">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Java Robusta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Java Robusta</h3>
+                            <span class="text-coffee-gold font-bold">$12.99</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Strong and bold with a distinctive nutty flavor and rich crema.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-coffee-light ml-2">4.2</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product blend">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Bukit Rasa Signature Blend" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-coffee-gold text-coffee-dark px-2 py-1 rounded text-sm font-bold">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Signature Blend</h3>
+                            <span class="text-coffee-gold font-bold">$16.99</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Our master blend with notes of caramel, citrus, and dark chocolate.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-coffee-light ml-2">5.0</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product merchandise">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Ceramic Coffee Mug" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Ceramic Coffee Mug</h3>
+                            <span class="text-coffee-gold font-bold">$19.99</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Handcrafted ceramic mug with our signature logo, perfect for your morning brew.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-coffee-light ml-2">4.6</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product arabica">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Bali Kintamani" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Bali Kintamani</h3>
+                            <span class="text-coffee-gold font-bold">$15.99</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Bright acidity with floral notes and a clean, fruity finish.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-coffee-light ml-2">4.1</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product robusta">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Toraja Robusta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Toraja Robusta</h3>
+                            <span class="text-coffee-gold font-bold">$13.99</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Intense flavor with spicy notes and a long-lasting aftertaste.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-coffee-light ml-2">4.5</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product blend">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Morning Bliss Blend" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Morning Bliss Blend</h3>
+                            <span class="text-coffee-gold font-bold">$15.49</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Smooth and balanced with hints of nuts and brown sugar.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-coffee-light ml-2">4.2</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product merchandise">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Insulated Travel Tumbler" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2 bg-coffee-gold text-coffee-dark px-2 py-1 rounded text-sm font-bold">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold">Travel Tumbler</h3>
+                            <span class="text-coffee-gold font-bold">$24.99</span>
+                        </div>
+                        <p class="text-coffee-light mb-4">Double-walled stainless steel tumbler keeps your coffee hot for hours.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-coffee-light ml-2">4.9</span>
+                            </div>
+                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-coffee-dark text-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream font-bold px-6 py-3 rounded transition">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-coffee-medium text-coffee-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
+                <div class="w-24 h-1 bg-coffee-gold mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-coffee-light">2 weeks ago</span>
+                    </div>
+                    <p class="mb-6 italic">"The Sumatra Mandheling is absolutely incredible. The earthy tones and chocolate finish make it my daily go-to. Bukit Rasa has ruined other coffee for me!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-coffee-light mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <p class="text-sm text-coffee-light">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-coffee-light">1 month ago</span>
+                    </div>
+                    <p class="mb-6 italic">"I've been a coffee enthusiast for years, and Bukit Rasa's Signature Blend is hands down the best coffee I've ever had. The balance of flavors is perfection."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-coffee-light mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <p class="text-sm text-coffee-light">Coffee Connoisseur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-sm text-coffee-light">3 weeks ago</span>
+                    </div>
+                    <p class="mb-6 italic">"The travel tumbler is a game-changer! It keeps my coffee hot all morning and the design is sleek. Plus, the customer service is exceptional - they really care."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-coffee-light mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya K.</h4>
+                            <p class="text-sm text-coffee-light">Frequent Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brew Guide Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">The Perfect Brew</h2>
+                <div class="w-24 h-1 bg-coffee-gold mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto">Discover the best methods to brew our coffee and unlock its full potential.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brew Method 1 -->
+                <div class="text-center">
+                    <div class="bg-coffee-cream rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-coffee text-5xl text-coffee-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">French Press</h3>
+                    <p class="text-coffee-light">Ideal for our Sumatra and Bali beans. Brings out the full body and rich flavors.</p>
+                </div>
+                
+                <!-- Brew Method 2 -->
+                <div class="text-center">
+                    <div class="bg-coffee-cream rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tint text-5xl text-coffee-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Pour Over</h3>
+                    <p class="text-coffee-light">Perfect for our Java and Toraja beans. Highlights the clean, bright acidity.</p>
+                </div>
+                
+                <!-- Brew Method 3 -->
+                <div class="text-center">
+                    <div class="bg-coffee-cream rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bolt text-5xl text-coffee-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Espresso</h3>
+                    <p class="text-coffee-light">Our Signature Blend shines as espresso with rich crema and balanced flavor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-bg py-20 text-coffee-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-coffee-gold mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="font-serif text-2xl font-bold mb-6">Contact Information</h3>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-coffee-gold mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Our Café</h4>
+                                <p>123 Coffee Street, Jakarta 10110, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-phone-alt text-coffee-gold mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Call Us</h4>
+                                <p>+62 21 1234 5678</p>
+                                <p>Mon-Fri: 8am-5pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-coffee-gold mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Email Us</h4>
+                                <p>hello@bukitrasacoffee.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-serif text-2xl font-bold mb-6">Quick Order via WhatsApp</h3>
+                    <a href="https://wa.me/622112345678" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition">
+                        <i class="fab fa-whatsapp text-xl mr-3"></i>
+                        Chat Now
+                    </a>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-coffee-cream border-opacity-50 rounded focus:outline-none focus:ring-2 focus:ring-coffee-gold">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-coffee-cream border-opacity-50 rounded focus:outline-none focus:ring-2 focus:ring-coffee-gold">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-coffee-cream border-opacity-50 rounded focus:outline-none focus:ring-2 focus:ring-coffee-gold">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 bg-white bg-opacity-20 border border-coffee-cream border-opacity-50 rounded focus:outline-none focus:ring-2 focus:ring-coffee-gold"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-coffee-gold hover:bg-yellow-600 text-coffee-dark font-bold py-3 px-6 rounded transition w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-coffee-dark text-coffee-cream">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-serif text-3xl font-bold mb-6">Join Our Coffee Club</h2>
+            <p class="max-w-2xl mx-auto mb-8">Subscribe to our newsletter and receive 10% off your first order, plus exclusive access to new releases and special offers.</p>
+            
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l focus:outline-none text-coffee-dark">
+                <button type="submit" class="bg-coffee-gold hover:bg-yellow-600 text-coffee-dark font-bold px-6 py-3 rounded-r transition">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-medium text-coffee-cream py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-coffee text-coffee-gold text-2xl"></i>
+                        <span class="font-serif text-xl font-bold">Bukit Rasa Coffee</span>
+                    </div>
+                    <p class="mb-4">Premium coffee from the Indonesian highlands, roasted with passion and delivered to your door.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-coffee-gold transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-coffee-gold transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-coffee-gold transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-coffee-gold transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-coffee-gold transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-coffee-gold transition">About Us</a></li>
+                        <li><a href="#products" class="hover:text-coffee-gold transition">Products</a></li>
+                        <li><a href="#testimonials" class="hover:text-coffee-gold transition">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-coffee-gold transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg font-bold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-coffee-gold transition">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-coffee-gold transition">Returns & Refunds</a></li>
+                        <li><a href="#" class="hover:text-coffee-gold transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-coffee-gold transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-coffee-gold transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-serif text-lg font-bold mb-4">Payment Methods</h3>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <i class="fab fa-cc-visa text-2xl"></i>
+                        <i class="fab fa-cc-mastercard text-2xl"></i>
+                        <i class="fab fa-cc-paypal text-2xl"></i>
+                        <i class="fab fa-cc-amazon-pay text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold mb-2">We Ship Worldwide</h3>
+                    <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/id.svg" alt="Indonesia" class="h-6 inline mr-2">
+                    <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/us.svg" alt="USA" class="h-6 inline mr-2">
+                    <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/eu.svg" alt="Europe" class="h-6 inline mr-2">
+                    <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/au.svg" alt="Australia" class="h-6 inline">
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-coffee-light border-opacity-20 text-center text-sm">
+                <p>&copy; 2023 Bukit Rasa Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-coffee-gold text-coffee-dark w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-serif text-xl font-bold">Your Cart</h3>
+                <button id="close-cart" class="text-coffee-light hover:text-coffee-dark">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="border-b border-coffee-cream pb-4 mb-4" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+                <p class="text-center py-8 text-coffee-light">Your cart is empty</p>
+            </div>
+            
+            <div class="border-t border-coffee-cream pt-4 mb-6">
+                <div class="flex justify-between mb-2">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span>Shipping</span>
+                    <span>Calculated at checkout</span>
+                </div>
+                <div class="flex justify-between font-bold text-lg">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+            </div>
+            
+            <button class="w-full bg-coffee-dark hover:bg-coffee-medium text-coffee-cream py-3 rounded font-bold transition mb-4">
+                Proceed to Checkout
+            </button>
+            
+            <p class="text-center text-sm text-coffee-light">or</p>
+            
+            <button class="w-full border border-coffee-dark text-coffee-dark hover:bg-coffee-cream py-3 rounded font-bold transition mt-2">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Product filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-coffee-dark', 'text-coffee-cream');
+                    btn.classList.add('border', 'border-coffee-dark');
+                });
+                this.classList.add('bg-coffee-dark', 'text-coffee-cream');
+                this.classList.remove('border', 'border-coffee-dark');
+                
+                // Filter products
+                const filter = this.getAttribute('data-filter');
+                
+                products.forEach(product => {
+                    if (filter === 'all' || product.classList.contains(filter)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Shopping cart functionality
+        const cart = {
+            items: [],
+            addItem: function(productName, price) {
+                const existingItem = this.items.find(item => item.name === productName);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    this.items.push({
+                        name: productName,
+                        price: price,
+                        quantity: 1
+                    });
+                }
+                
+                this.updateCart();
+            },
+            removeItem: function(index) {
+                this.items.splice(index, 1);
+                this.updateCart();
+            },
+            updateQuantity: function(index, newQuantity) {
+                if (newQuantity > 0) {
+                    this.items[index].quantity = newQuantity;
+                } else {
+                    this.removeItem(index);
+                }
+                this.updateCart();
+            },
+            getTotal: function() {
+                return this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+            },
+            updateCart: function() {
+                const cartItemsContainer = document.getElementById('cart-items');
+                const cartSubtotal = document.getElementById('cart-subtotal');
+                const cartTotal = document.getElementById('cart-total');
+                const cartCount = document.querySelector('.fa-shopping-cart + span');
+                
+                // Update cart items display
+                if (this.items.length === 0) {
+                    cartItemsContainer.innerHTML = '<p class="text-center py-8 text-coffee-light">Your cart is empty</p>';
+                } else {
+                    let itemsHTML = '';
+                    this.items.forEach((item, index) => {
+                        itemsHTML += `
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h4 class="font-bold">${item.name}</h4>
+                                    <p class="text-sm text-coffee-light">$${item.price.toFixed(2)}</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <button class="quantity-btn px-2 text-coffee-light hover:text-coffee-dark" data-index="${index}" data-action="decrease">-</button>
+                                    <span class="mx-2">${item.quantity}</span>
+                                    <button class="quantity-btn px-2 text-coffee-light hover:text-coffee-dark" data-index="${index}" data-action="increase">+</button>
+                                    <button class="ml-4 text-red-500 hover:text-red-700" data-index="${index}" data-action="remove">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    cartItemsContainer.innerHTML = itemsHTML;
+                    
+                    // Add event listeners to quantity buttons
+                    document.querySelectorAll('.quantity-btn').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const index = parseInt(this.getAttribute('data-index'));
+                            const action = this.getAttribute('data-action');
+                            
+                            if (action === 'increase') {
+                                cart.updateQuantity(index, cart.items[index].quantity + 1);
+                            } else if (action === 'decrease') {
+                                cart.updateQuantity(index, cart.items[index].quantity - 1);
+                            }
+                        });
+                    });
+                    
+                    // Add event listeners to remove buttons
+                    document.querySelectorAll('[data-action="remove"]').forEach(button => {
+                        button.addEventListener('click', function() {
+                            const index = parseInt(this.getAttribute('data-index'));
+                            cart.removeItem(index);
+                        });
+                    });
+                }
+                
+                // Update totals
+                const total = this.getTotal();
+                cartSubtotal.textContent = `$${total.toFixed(2)}`;
+                cartTotal.textContent = `$${total.toFixed(2)}`;
+                cartCount.textContent = `(${this.items.reduce((count, item) => count + item.quantity, 0)})`;
+            }
+        };
+
+        // Add to cart buttons
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.coffee-card');
+                const productName = productCard.querySelector('h3').textContent;
+                const productPrice = parseFloat(productCard.querySelector('span').textContent.replace('$', ''));
+                
+                cart.addItem(productName, productPrice);
+                
+                // Show cart added notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded shadow-lg flex items-center';
+                notification.innerHTML = `
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <span>Added to cart: ${productName}</span>
+                `;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-300');
+                    setTimeout(() => notification.remove(), 300);
+                }, 2000);
+            });
+        });
+
+        // Cart sidebar toggle
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const cartOverlay = document.getElementById('cart-overlay');
+        
+        document.querySelector('.fa-shopping-cart').closest('a').addEventListener('click', function(e) {
+            e.preventDefault();
+            cartSidebar.classList.remove('translate-x-full');
+            cartOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        document.getElementById('close-cart').addEventListener('click', function() {
+            cartSidebar.classList.add('translate-x-full');
+            cartOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        cartOverlay.addEventListener('click', function() {
+            cartSidebar.classList.add('translate-x-full');
+            this.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
