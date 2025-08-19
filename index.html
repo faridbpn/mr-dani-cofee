@@ -6,6 +6,7 @@
     <title>Mekar Harum - Kopi Premium Silo-Jember Dikirim ke Rumah Anda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="image/pngtree-coffee-logo-icon-glass-design-rustic-png-image_6616219.jpg" type="image/svg+xml">
     <script>
         tailwind.config = {
             theme: {
@@ -134,7 +135,7 @@
                     <div class="flex flex-wrap gap-4">
                         <div class="flex items-center">
                             <i class="fas fa-leaf text-coffee-gold mr-2"></i>
-                            <span>100% Biji Organik</span>
+                            <span>Biji Organik</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-fire text-coffee-gold mr-2"></i>
@@ -150,79 +151,85 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-20 bg-coffee-cream">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Pilihan Kopi Kami</h2>
-                <div class="w-24 h-1 bg-coffee-gold mx-auto mb-6"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-8" id="product-grid">
-                <!-- Product 1 - Kopi Silo-Jember -->
-                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product blend">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="image/kopi.jpg" 
-                             alt="Kopi Silo-Jember Premium" class="w-full h-full object-cover">
-                        <div class="absolute top-2 right-2 bg-coffee-gold text-coffee-dark px-2 py-1 rounded text-sm font-bold">PREMIUM</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-serif text-xl font-bold">Kopi Silo-Jember Premium</h3>
-                        </div>
-                        <p class="text-coffee-light mb-4">Kopi bubuk murni asli dari daerah Silo-Jember dengan rasa yang lembut, hitam dan enak. Warisan rasa sejak zaman penjajahan Belanda.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span class="text-coffee-light ml-2">5.0</span>
-                            </div>
-                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
-                                Tambah ke Keranjang
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 2 - Kopi Silo-Jember Special -->
-                <div class="coffee-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 product arabica">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="image/kopi2.jpg" 
-                             alt="Kopi Silo-Jember Special" class="w-full h-full object-cover">
-                        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">SPESIAL</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-serif text-xl font-bold">Kopi Silo-Jember Special</h3>
-                        </div>
-                        <p class="text-coffee-light mb-4">Kopi premium dengan karakteristik rasa yang unik dan berbeda. Sangat cocok untuk dinikmati dalam kondisi dingin.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span class="text-coffee-light ml-2">4.8</span>
-                            </div>
-                            <button class="bg-coffee-dark hover:bg-coffee-medium text-coffee-cream px-4 py-2 rounded transition add-to-cart">
-                                Tambah ke Keranjang
-                            </button>
-                        </div>
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-gray-800">Galeri Kami</h2>
+            <div class="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[200px]">
+            <!-- Gallery Item 1 - Large Landscape -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 lg:col-span-2 lg:row-span-2">
+                <div class="relative h-full">
+                    <img src="image/berkunjung-ke-kebun-kopi-kayu-aro-kerinci.jpg" alt="Pemandangan Alam" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="font-serif text-xl font-bold text-white">Kebun Kopi Kami</h3>
+                        <p class="text-gray-200 text-sm">Keindahan alam pegunungan.</p>
                     </div>
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <button class="border-2 border-coffee-dark text-coffee-dark hover:bg-coffee-dark hover:text-coffee-cream font-bold px-6 py-3 rounded transition">
-                    Lihat Semua Produk
-                </button>
+            <!-- Gallery Item 2 - Food -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="relative h-full">
+                    <img src="image/ground-coffee-on-coffee-beans-1.jpg" alt="Sashimi Segar" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="font-serif text-lg font-bold text-white">Dengan Biji Kopi Pilihan</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 3 - Landscape -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="relative h-full">
+                    <img src="image/kopi.jpg" alt="Sungai dan Jembatan" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="font-serif text-lg font-bold text-white"></h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 4 - Large Landscape -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 lg:col-span-2 lg:row-span-2">
+                <div class="relative h-full">
+                    <img src="image/kopi2.jpg" alt="Danau Gunung" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="font-serif text-xl font-bold text-white">Dibuat </h3>
+                        <p class="text-gray-200 text-sm">Pemandangan danau di kaki gunung.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 5 - Event -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="relative h-full">
+                    <img src="image/kopi3.jpg" alt="Festival Lokal" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="font-serif text-lg font-bold text-white">Festival Lokal</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 6 - Resort -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="relative h-full">
+                    <img src="image/resort1.jpg" alt="Resort Pantai" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="font-serif text-lg font-bold text-white">Resort Pantai</h3>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        
+        <div class="text-center mt-12">
+            <button class="border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white font-bold px-6 py-3 rounded transition">
+                Lihat Semua Galeri
+            </button>
+        </div>
+    </div>
+</section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-coffee-medium text-coffee-cream">
@@ -248,10 +255,10 @@
                     <p class="mb-6 italic text-coffee-dark">"Kopi Silo-Jember ini benar-benar luar biasa. Rasanya yang lembut dan nikmat membuat saya ketagihan. Mekar Harum telah merusak selera kopi saya yang lain!"</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-coffee-light mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-full h-full object-cover">
+                            <img src="image/hamster war.jpg" alt="Sarah J." class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold">Sarah J.</h4>
+                            <h4 class="font-bold text-coffee-dark">Sarah J.</h4>
                             <p class="text-sm text-coffee-light">Pelanggan Terverifikasi</p>
                         </div>
                     </div>
@@ -272,10 +279,10 @@
                     <p class="mb-6 italic text-coffee-dark">"Saya sudah menjadi pecinta kopi selama bertahun-tahun, dan Kopi Silo-Jember dari Mekar Harum adalah kopi terbaik yang pernah saya rasakan. Keseimbangan rasa yang sempurna."</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-coffee-light mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-full h-full object-cover">
+                            <img src="image/hamster war.jpg" alt="Michael T." class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold">Michael T.</h4>
+                            <h4 class="font-bold text-coffee-dark">Budi</h4>
                             <p class="text-sm text-coffee-light">Konsultan Kopi</p>
                         </div>
                     </div>
@@ -296,10 +303,10 @@
                     <p class="mb-6 italic text-coffee-dark">"Kopi Silo-Jember ini memang berbeda dari yang lain. Rasanya yang lembut dan enak, apalagi kalau diminum dingin. Pelayanan customer service juga sangat baik!"</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-coffee-light mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K." class="w-full h-full object-cover">
+                            <img src="image/hamster war.jpg" alt="Priya K." class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold">Priya K.</h4>
+                            <h4 class="text-coffee-dark">Farid</h4>
                             <p class="text-sm text-coffee-light">Pembeli Rutin</p>
                         </div>
                     </div>
@@ -323,8 +330,8 @@
                     <div class="bg-coffee-cream rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-coffee text-5xl text-coffee-gold"></i>
                     </div>
-                    <h3 class="font-serif text-xl font-bold mb-3">French Press</h3>
-                    <p class="text-coffee-light">Ideal untuk biji kopi Silo-Jember kami. Mengeluarkan body penuh dan rasa yang kaya.</p>
+                    <h3 class="font-serif text-xl font-bold mb-3">Keunggulan Tanah Silo Jember</h3>
+                    <p class="text-coffee-light">Silo adalah salah satu kecamatan di Kabupaten Jember, Jawa Timur, yang terkenal sebagai daerah penghasil kopi unggulan. Kondisi tanah vulkanik yang subur serta iklim pegunungan membuat kopi yang tumbuh di sini memiliki cita rasa khas: aroma kuat, rasa seimbang, dan aftertaste lembut.</p>
                 </div>
                 
                 <!-- Brew Method 2 -->
@@ -332,8 +339,8 @@
                     <div class="bg-coffee-cream rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-tint text-5xl text-coffee-gold"></i>
                     </div>
-                    <h3 class="font-serif text-xl font-bold mb-3">Pour Over</h3>
-                    <p class="text-coffee-light">Sempurna untuk kopi Silo-Jember. Menonjolkan keasaman yang bersih dan cerah.</p>
+                    <h3 class="font-serif text-xl font-bold mb-3">Proses Pengolahan Tradisional</h3>
+                    <p class="text-coffee-light">Kopi bubuk Mekar Harum diolah langsung oleh para petani dan pengrajin kopi lokal. Proses penyangraian (roasting) dilakukan dengan cara yang teliti, menjaga kualitas biji kopi agar menghasilkan rasa yang mantap.</p>
                 </div>
                 
                 <!-- Brew Method 3 -->
@@ -341,8 +348,8 @@
                     <div class="bg-coffee-cream rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-bolt text-5xl text-coffee-gold"></i>
                     </div>
-                    <h3 class="font-serif text-xl font-bold mb-3">Espresso</h3>
-                    <p class="text-coffee-light">Kopi Silo-Jember kami bersinar sebagai espresso dengan crema yang kaya dan rasa yang seimbang.</p>
+                    <h3 class="font-serif text-xl font-bold mb-3">Cita Rasa yang Tidak Tertandingi</h3>
+                    <p class="text-coffee-light">Kopi Silo Jember terkenal memiliki aroma harum dan rasa mantap, sesuai dengan tagline "Mantap Broo!" yang tertulis pada kemasan Kopi Mekar Harum.</p>
                 </div>
             </div>
         </div>
